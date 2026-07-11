@@ -1,1 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+Zoila's Kitchen | Digital Growth Strategy
+</title>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+<style>
+
+
+:root{
+
+--black:#080808;
+--dark:#111111;
+--gold:#C9A45C;
+--cream:#F5EFE6;
+--olive:#66704F;
+--white:#ffffff;
+--gray:#b8b8b8;
+
+}
+
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+
+body{
+
+background:var(--black);
+color:white;
+font-family:"Inter",sans-serif;
+
+}
+
+
+/* LOADING SCREEN */
+
+
+.loader{
+
+position:fixed;
+
+height:100vh;
+width:100%;
+
+background:#080808;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:9999;
+
+animation:fadeOut 3s forwards;
+
+}
+
+
+.loader-content{
+
+text-align:center;
+
+letter-spacing:5px;
+
+}
+
+
+
+.loader h3{
+
+font-size:14px;
+
+color:var(--gold);
+
+margin-bottom:40px;
+
+}
+
+
+.loader h1{
+
+font-family:"Cormorant Garamond";
+
+font-size:60px;
+
+}
+
+
+
+@keyframes fadeOut{
+
+0%{
+opacity:1;
+}
+
+80%{
+opacity:1;
+}
+
+100%{
+
+opacity:0;
+visibility:hidden;
+
+}
+
+}
+
+
+
+/* NAV */
+
+
+nav{
+
+position:fixed;
+
+top:0;
+
+width:100%;
+
+padding:25px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+z-index:100;
+
+
+background:
+
+linear-gradient(
+rgba(8,8,8,.8),
+transparent
+);
+
+
+}
+
+
+
+.logo{
+
+font-size:14px;
+
+letter-spacing:4px;
+
+color:var(--gold);
+
+}
+
+
+
+.nav-link{
+
+color:white;
+
+text-decoration:none;
+
+font-size:14px;
+
+}
+
+
+
+
+/* HERO */
+
+
+.hero{
+
+
+min-height:100vh;
+
+display:flex;
+
+align-items:center;
+
+padding:0 8%;
+
+
+background:
+
+
+linear-gradient(
+
+rgba(0,0,0,.55),
+
+rgba(0,0,0,.9)
+
+),
+
+
+url("https://images.unsplash.com/photo-1547592180-85f173990554")
+
+center/cover;
+
+
+}
+
+
+
+.hero-content{
+
+max-width:900px;
+
+}
+
+
+.tag{
+
+color:var(--gold);
+
+letter-spacing:5px;
+
+font-size:14px;
+
+margin-bottom:35px;
+
+}
+
+
+
+h1{
+
+
+font-family:"Cormorant Garamond";
+
+font-size:clamp(60px,8vw,120px);
+
+line-height:.9;
+
+}
+
+
+
+.gold{
+
+color:var(--gold);
+
+}
+
+
+
+.hero p{
+
+font-size:20px;
+
+line-height:1.8;
+
+max-width:650px;
+
+color:#ddd;
+
+margin-top:35px;
+
+}
+
+
+
+.button{
+
+
+display:inline-block;
+
+margin-top:45px;
+
+padding:18px 45px;
+
+border-radius:50px;
+
+background:var(--gold);
+
+color:#111;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+
+
+.button:hover{
+
+transform:translateY(-5px);
+
+}
+
+
+/* SECTION */
+
+
+section{
+
+padding:120px 8%;
+
+}
+
+
+.section-title{
+
+font-family:"Cormorant Garamond";
+
+font-size:70px;
+
+margin-bottom:30px;
+
+}
+
+
+
+.text{
+
+max-width:800px;
+
+font-size:20px;
+
+line-height:1.8;
+
+color:#ccc;
+
+}
+
+
+
+
+/* INTRO */
+
+.intro{
+
+min-height:80vh;
+
+display:flex;
+
+align-items:center;
+
+}
+
+
+.divider{
+
+height:1px;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+var(--gold),
+
+transparent
+
+);
+
+margin:50px 0;
+
+}
+
+
+
+/* MOBILE */
+
+
+@media(max-width:700px){
+
+
+section{
+
+padding:80px 5%;
+
+}
+
+
+.hero{
+
+padding:0 5%;
+
+}
+
+
+h1{
+
+font-size:60px;
+
+}
+
+
+.section-title{
+
+font-size:45px;
+
+}
+
+
+
+}
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- LOADING -->
+
+<div class="loader">
+
+<div class="loader-content">
+
+<h3>
+CUSTOM EXCLUSIVE SOCIALS
+</h3>
+
+
+<h1>
+PRESENTS
+<br><br>
+
+THE DIGITAL EVOLUTION
+<br>
+
+OF
+<br>
+
+ZOILA'S KITCHEN
+
+</h1>
+
+
+</div>
+
+</div>
+
+
+
+
+
+<!-- NAVIGATION -->
+
+
+<nav>
+
+
+<div class="logo">
+
+CES
+
+</div>
+
+
+<a class="nav-link" href="#vision">
+
+Explore Vision
+
+</a>
+
+
+</nav>
+
+
+
+
+
+
+<!-- HERO -->
+
+
+<section class="hero">
+
+
+<div class="hero-content">
+
+
+<div class="tag">
+
+DIGITAL GROWTH STRATEGY
+
+</div>
+
+
+
+<h1>
+
+
+Zoila's Kitchen
+
+<br>
+
+
+<span class="gold">
+
+Wholesome meals.
+Thoughtfully crafted.
+
+</span>
+
+
+</h1>
+
+
+
+
+<p>
+
+A digital transformation strategy designed to increase meal orders, catering opportunities, customer retention, and brand loyalty.
+
+</p>
+
+
+
+<a class="button" href="#vision">
+
+Explore The Vision
+
+</a>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- INTRO -->
+
+
+<section class="intro" id="vision">
+
+
+<div>
+
+
+<h2 class="section-title">
+
+A Strong Foundation.
+<br>
+
+A Bigger Opportunity.
+
+</h2>
+
+
+<div class="divider"></div>
+
+
+
+<p class="text">
+
+
+Zoila's Kitchen already has what every successful food brand needs:
+
+a meaningful product, a clear purpose, and meals created with care.
+
+
+<br><br>
+
+
+The next opportunity is building a digital system that attracts new customers while transforming first-time buyers into loyal returning customers.
+
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+</body>
+
+</html>
